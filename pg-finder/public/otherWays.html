@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other ways to reset - PG Finder</title>
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="auth-wrap">
+    <div class="auth-card" id="otherWays">
+      <span class="tag">Account recovery</span>
+      <h1>Forgot email?</h1>
+      <p class="sub">Choose another way to prove it's you and reset your password.</p>
+
+      <div class="method" id="mPhone">
+        <label><input type="radio" name="method" value="phone"> Phone number (OTP)</label>
+        <div class="body">
+          <div class="form-msg" id="msgPhone"></div>
+          <div class="field">
+            <input id="phoneNum" type="tel" placeholder="Registered 10-digit mobile number" autocomplete="tel">
+          </div>
+          <button class="btn btn-navy btn-sm" type="button" id="sendOtp">Send code</button>
+          <div id="otpStep" style="display:none;margin-top:14px">
+            <div class="field">
+              <input id="otpCode" inputmode="numeric" maxlength="6" placeholder="6-digit code" autocomplete="one-time-code">
+            </div>
+            <button class="btn btn-gold btn-sm" type="button" id="verifyOtp">Verify &amp; continue</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="method" id="mQuestion">
+        <label><input type="radio" name="method" value="question"> Recovery question</label>
+        <div class="body">
+          <div class="form-msg" id="msgQuestion"></div>
+          <div class="field">
+            <input id="qUser" placeholder="Your username" autocomplete="username">
+          </div>
+          <button class="btn btn-navy btn-sm" type="button" id="showQ">Show my question</button>
+          <div id="qStep" style="display:none;margin-top:14px">
+            <p id="qText" style="font-weight:600;color:var(--navy);margin-bottom:8px"></p>
+            <div class="field">
+              <input id="qAnswer" placeholder="Your answer" autocomplete="off">
+            </div>
+            <button class="btn btn-gold btn-sm" type="button" id="verifyQ">Verify &amp; continue</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="auth-foot">Remember your email? <a href="forgotPassword.html">Use email</a></p>
+      <p class="auth-foot" style="margin-top:8px">Remember your password? <a href="login.html">Login here</a></p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

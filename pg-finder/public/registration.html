@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account - PG Finder</title>
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <span class="tag">PG Finder</span>
+      <h1>Create account</h1>
+      <p class="sub">It takes less than a minute.</p>
+
+      <form id="registerForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" autocomplete="name" required maxlength="100" placeholder="Your full name">
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" name="username" autocomplete="username" required maxlength="30" placeholder="letters, numbers, _">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="phone">Mobile (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="10-digit number">
+          </div>
+          <div class="field">
+            <label for="role">I am a</label>
+            <select id="role" name="role">
+              <option value="tenant">Tenant (looking for a PG)</option>
+              <option value="owner">PG owner (listing a PG)</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw">
+              <input id="password" name="password" type="password" autocomplete="new-password" required placeholder="8+ chars, letter &amp; number">
+              <button type="button" data-toggle-pw="password" aria-label="Show or hide password">👁</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required placeholder="Repeat password">
+          </div>
+        </div>
+
+        <details class="optional-box">
+          <summary>Add a recovery question (optional)</summary>
+          <div class="field">
+            <label for="recoveryQuestion">Question</label>
+            <select id="recoveryQuestion" name="recoveryQuestion">
+              <option value="">Choose a question</option>
+              <option>What was the name of your first pet?</option>
+              <option>What is your mother's maiden name?</option>
+              <option>What city were you born in?</option>
+              <option>What was your first school's name?</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="recoveryAnswer">Answer</label>
+            <input id="recoveryAnswer" name="recoveryAnswer" maxlength="100" autocomplete="off">
+            <div class="hint">Used to reset your password if you lose access to your email.</div>
+          </div>
+        </details>
+
+        <button class="btn btn-gold btn-block" type="submit">Register now</button>
+      </form>
+
+      <p class="auth-foot">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

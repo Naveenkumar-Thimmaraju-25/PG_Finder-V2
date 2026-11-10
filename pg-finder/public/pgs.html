@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse PGs - PG Finder</title>
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <div class="page-head">
+    <div class="container">
+      <h1>Browse PGs</h1>
+      <p>Filter by budget, sharing type, food and amenities.</p>
+    </div>
+  </div>
+
+  <div class="container browse">
+    <aside class="filters" id="filters">
+      <h3>Filters <button type="button" id="clearBtn">Clear all</button></h3>
+
+      <div class="fgroup"><label for="fQ">Search</label>
+        <input type="text" id="fQ" placeholder="Area, college, landmark"></div>
+
+      <div class="fgroup"><label for="fCity">City</label>
+        <select id="fCity"><option value="">All cities</option></select></div>
+
+      <div class="fgroup"><span class="lbl">Monthly rent (₹)</span>
+        <div class="two"><input type="number" id="fMin" min="0" placeholder="Min"><input type="number" id="fMax" min="0" placeholder="Max"></div></div>
+
+      <div class="fgroup"><label for="fGender">Suitable for</label>
+        <select id="fGender"><option value="">Anyone</option><option value="male">Men</option><option value="female">Women</option></select></div>
+
+      <div class="fgroup"><span class="lbl">Sharing</span>
+        <div class="checks" id="fSharing">
+          <label><input type="checkbox" value="single"> Single</label>
+          <label><input type="checkbox" value="double"> Double</label>
+          <label><input type="checkbox" value="triple"> Triple</label>
+          <label><input type="checkbox" value="quad"> Four or more</label>
+        </div></div>
+
+      <div class="fgroup"><div class="checks">
+        <label><input type="checkbox" id="fFood"> Meals included</label>
+        <label><input type="checkbox" id="fVerified"> Verified only</label>
+      </div></div>
+
+      <div class="fgroup"><span class="lbl">Amenities</span><div class="checks" id="fAmenities"></div></div>
+    </aside>
+
+    <section>
+      <div class="results-bar">
+        <div><button class="btn btn-ghost btn-sm filter-toggle" id="filterToggle" type="button">⚙ Filters</button>
+          <strong id="count">Loading...</strong></div>
+        <select id="fSort" aria-label="Sort">
+          <option value="newest">Newest first</option>
+          <option value="rent_asc">Rent: low to high</option>
+          <option value="rent_desc">Rent: high to low</option>
+          <option value="rating">Top rated</option>
+        </select>
+      </div>
+      <div class="grid" id="results"></div>
+      <div class="pager" id="pager"></div>
+    </section>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>

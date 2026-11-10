@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a PG - PG Finder</title>
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <div class="page-head">
+    <div class="container">
+      <h1>Add a PG</h1>
+      <p>Tell tenants about your place. It takes about two minutes.</p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:36px">
+    <div class="container" style="max-width:820px">
+      <form class="form-card" id="pgForm" novalidate>
+        <div class="field"><label for="title">Listing title</label>
+          <input id="title" name="title" required maxlength="150" placeholder="e.g. Sunrise Premium PG for Men"></div>
+
+        <div class="field"><label for="description">Description</label>
+          <textarea id="description" name="description" maxlength="4000" placeholder="Rooms, rules, nearby places, what makes it special"></textarea></div>
+
+        <div class="row2">
+          <div class="field"><label for="city">City</label><input id="city" name="city" required maxlength="80" placeholder="Bengaluru"></div>
+          <div class="field"><label for="area">Area</label><input id="area" name="area" required maxlength="100" placeholder="HSR Layout"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="address">Address (optional)</label><input id="address" name="address" maxlength="255"></div>
+          <div class="field"><label for="landmark">Landmark (optional)</label><input id="landmark" name="landmark" maxlength="150" placeholder="Near metro station"></div>
+        </div>
+
+        <div class="row2">
+          <div class="field"><label for="rent">Monthly rent (₹)</label><input id="rent" name="rent" type="number" min="500" max="500000" required></div>
+          <div class="field"><label for="deposit">Security deposit (₹)</label><input id="deposit" name="deposit" type="number" min="0" value="0"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="gender">Suitable for</label>
+            <select id="gender" name="gender"><option value="unisex">Men &amp; Women</option><option value="male">Men only</option><option value="female">Women only</option></select></div>
+          <div class="field"><label for="sharing">Sharing type</label>
+            <select id="sharing" name="sharing"><option value="single">Single</option><option value="double" selected>Double</option><option value="triple">Triple</option><option value="quad">Four or more</option></select></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="roomsAvailable">Rooms available</label><input id="roomsAvailable" name="roomsAvailable" type="number" min="0" max="200" value="1"></div>
+          <div class="field"><label for="contactPhone">Contact number</label><input id="contactPhone" name="contactPhone" type="tel" placeholder="10-digit mobile"></div>
+        </div>
+
+        <div class="field"><label class="checkline"><input type="checkbox" name="foodIncluded"> Meals included in the rent</label></div>
+
+        <div class="field"><label>Amenities</label><div class="amen-pick" id="amenPick"></div></div>
+
+        <div class="field"><label for="images">Photo links (one per line, up to 6)</label>
+          <textarea id="images" name="images" placeholder="https://example.com/room1.jpg"></textarea>
+          <div class="hint">The first link is used as the cover photo.</div></div>
+
+        <button class="btn btn-gold btn-block" type="submit">Publish listing</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/addpg.js"></script>
+</body>
+</html>

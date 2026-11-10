@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PG Finder - Find the best PG near you</title>
+  <meta name="description" content="Find safe, affordable and verified PG accommodation. Zero brokerage.">
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <header class="hero">
+    <div class="container">
+      <span class="badge">Zero brokerage</span>
+      <h1>Find your <span>perfect PG</span><br>near you</h1>
+      <p>Safe, affordable and verified paying-guest stays for students, professionals and travellers.</p>
+
+      <form class="search-bar" id="searchForm">
+        <select id="sCity" aria-label="City"><option value="">All cities</option></select>
+        <input id="sQuery" type="text" placeholder="Area, college or landmark" aria-label="Area, college or landmark">
+        <select id="sBudget" aria-label="Budget">
+          <option value="">Any budget</option>
+          <option value="5000">Up to ₹5,000</option>
+          <option value="8000">Up to ₹8,000</option>
+          <option value="12000">Up to ₹12,000</option>
+          <option value="15000">Up to ₹15,000</option>
+        </select>
+        <button class="btn btn-gold" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="container">
+      <div class="stat"><b id="stListings">-</b><span>Listings</span></div>
+      <div class="stat"><b id="stCities">-</b><span>Cities</span></div>
+      <div class="stat"><b id="stMembers">-</b><span>Members</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="center">
+        <span class="tag">Top rated</span>
+        <h2 class="section-title">Popular PGs right now</h2>
+        <p class="lead">Hand-picked stays loved by the people who live there.</p>
+      </div>
+      <div class="grid" id="featured" style="margin-top:44px"></div>
+      <div class="center" style="margin-top:36px"><a class="btn btn-navy" href="pgs.html">Browse all PGs</a></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff">
+    <div class="container center">
+      <span class="tag">How it works</span>
+      <h2 class="section-title">Find your PG in 4 simple steps</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h4>Search by location</h4><p>Enter an area, city or landmark to see PGs nearby.</p></div>
+        <div class="step"><div class="num">2</div><h4>Apply filters</h4><p>Narrow down by rent, sharing type, food and amenities.</p></div>
+        <div class="step"><div class="num">3</div><h4>Shortlist</h4><p>Save favourites and compare photos and reviews.</p></div>
+        <div class="step"><div class="num">4</div><h4>Contact &amp; move in</h4><p>Send an enquiry straight to the owner and book a visit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container center">
+      <span class="tag">Why PG Finder</span>
+      <h2 class="section-title">The smarter way to find a PG</h2>
+      <div class="features">
+        <div class="feature"><div class="ico">🏠</div><h3>Zero brokerage</h3><p>Talk directly to owners and keep your money.</p></div>
+        <div class="feature"><div class="ico">🔎</div><h3>Smart filters</h3><p>Budget, gender, sharing, meals, Wi-Fi, parking and more.</p></div>
+        <div class="feature"><div class="ico">⭐</div><h3>Real reviews</h3><p>Honest ratings from people who have actually stayed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Own a PG?<br>List it for free.</h2>
+    <p>Reach thousands of students and professionals searching in your area.</p>
+    <div class="row">
+      <a class="btn btn-gold" href="registration.html">Create an account</a>
+      <a class="btn btn-outline light" href="pgs.html">Browse PGs</a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

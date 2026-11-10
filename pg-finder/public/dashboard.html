@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner dashboard - PG Finder</title>
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <div class="page-head">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <div><h1>Owner dashboard</h1><p>Manage your listings and enquiries.</p></div>
+      <a class="btn btn-gold" href="add-pg.html">+ Add a PG</a>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:36px">
+    <div class="container">
+      <div class="tabs">
+        <button type="button" class="on" data-tab="listings">My listings</button>
+        <button type="button" data-tab="enquiries">Enquiries <span id="newCount"></span></button>
+      </div>
+      <div id="listings" class="table-wrap"></div>
+      <div id="enquiries" class="table-wrap" style="display:none"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

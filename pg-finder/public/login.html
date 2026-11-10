@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PG Finder</title>
+  <link rel="icon" href="images/pglogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <span class="tag">Welcome back</span>
+      <h1>Login</h1>
+      <p class="sub">Sign in to save PGs, write reviews and manage listings.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="identifier">Username or email</label>
+          <input id="identifier" name="identifier" autocomplete="username" required placeholder="Enter username or email">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pw">
+            <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter password">
+            <button type="button" data-toggle-pw="password" aria-label="Show or hide password">👁</button>
+          </div>
+        </div>
+        <div class="row-between">
+          <label class="checkline"><input type="checkbox" name="remember"> Remember me</label>
+          <a href="forgotPassword.html">Forgot password?</a>
+        </div>
+        <button class="btn btn-gold btn-block" type="submit">Login</button>
+      </form>
+
+      <div class="divider">or</div>
+      <button class="social" type="button" data-social="Google"><img src="images/google.png" alt=""> Continue with Google</button>
+      <button class="social" type="button" data-social="Facebook"><b style="color:#1877f2;font-size:18px">f</b> Continue with Facebook</button>
+
+      <p class="auth-foot">Don't have an account? <a href="registration.html">Register</a></p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
